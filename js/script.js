@@ -4,13 +4,19 @@
 // igpay, banana becomes ananabay, and aadvark becomes aadvarkay.
 // CREATE THE FUNCTIONS BELOW
 
-// Document Ready Function. All of your jQuery should go in here. 
-$( document ).ready(function() {
-  
+// Document Ready Function. All of your jQuery should go in here.
 
+$("#submit").click(function () {
 
-
+    var word = $("input").val(); 
+    var piglatin = latin(word);
+    $("#text").html(piglatin);
+    
 });
+
+function latin(word) {
+    return word + "ay" ;
+}
 
 
 // Create the wordToPigLatin function that takes a word as a parameter and returns a transfromed word. 
